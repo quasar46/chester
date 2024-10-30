@@ -1,0 +1,87 @@
+.case__tabs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+	margin-bottom: 32px;
+
+	.tab {
+		position: relative;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		padding: 0 27px;
+		border-radius: 80px;
+		background-color: #616161;
+		font-size: 18px;
+		font-weight: 400;
+		height: 38px;
+		cursor: pointer;
+
+		&.active,
+		&:hover {
+			background-color: #fff;
+			color: #000;
+		}
+
+		@media(max-width: 767px) {
+			font-size: 11px;
+			height: 29px;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100px;
+			height: 100%;
+			background-image: linear-gradient(120deg,
+					rgba(255, 255, 255, 0) 30%,
+					/* Прозрачность начала блика */
+					rgba(255, 255, 255, 0.8),
+					/* Цвет блика */
+					rgba(255, 255, 255, 0) 70%
+					/* Прозрачность конца блика */
+				);
+			top: 0;
+			left: -100px;
+			animation: shine 2s infinite linear;
+			/* Анимация блика */
+		}
+	}
+
+	@media(max-width: 767px) {
+		gap: 12px;
+	}
+}
+
+.case__tab-pane {
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}
+
+.reviews__tabs {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	font-size: 16px;
+	font-weight: 500;
+
+	.tab {
+		text-decoration: underline;
+		cursor: pointer;
+
+		&:not(.active) {
+			color: #fff;
+		}
+
+		&.active {
+			color: #BDBDBD;
+		}
+	}
+
+	@media(max-width: 767px) {
+		font-size: 14px;
+	}
+}

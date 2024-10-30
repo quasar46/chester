@@ -1,0 +1,40 @@
+.feedback {
+	border-radius: 25px;
+	display: grid;
+	grid-template-columns: 1fr 388px;
+	background: #202020;
+	padding: 32px;
+
+	@media(max-width: 767px) {
+		display: flex;
+		flex-direction: column;
+		padding: 24px 16px;
+		gap: 30px;
+	}
+}
+
+.feedback__content {
+	display: flex;
+	flex-direction: column;
+	max-width: 495px;
+}
+
+.feedback__title {
+	font-size: 24px;
+	font-weight: 500;
+	margin-bottom: 30px;
+
+	@media(max-width: 767px) {
+		font-size: 18px;
+	}
+}
+
+.feedback__text {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	@media(max-width: 767px) {
+		font-size: 14px;
+	}
+}

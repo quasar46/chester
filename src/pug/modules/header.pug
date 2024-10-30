@@ -1,0 +1,27 @@
+header.header 
+	.container 
+		.header__wrap 
+			a.header__logo(href="index.html")
+				img(alt="" src="img/logo.svg") 
+			nav.header__nav.menu
+				.menu__item
+					a Услуги 
+					include ../svg/arrow-down
+					.dropdown
+						.dropdown__links
+							a(href="") Семейные споры
+							a(href="") Юридическое сопровождение бизнеса
+							a(href="") Трудовые споры
+							a(href="") Недвижимость 
+							a(href="") Представительлство в судах
+				.menu__item
+					a(href="#staff") Юристы и адвокаты
+				.menu__item
+					a(href="#reviews") Отзывы
+				.menu__item
+					a(href="") Полезные статьи
+				.menu__item
+					a(href="#contacts") Контакты
+				.menu__item
+			a.header__phone(href="tel:+79037900360" onclick="ym(62967727,'reachGoal','zvonok'); return true;")  +7 903 790 03 60
+			.burger 

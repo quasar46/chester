@@ -1,0 +1,69 @@
+.social-wrap {
+	position: fixed;
+	right: 20px;
+	bottom: 10px;
+	z-index: 10;
+}
+
+.iconanim {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	text-decoration: none;
+	font-family: sans-serif;
+	color: rgb(18, 18, 136);
+	font-size: 18px;
+	font-weight: 700;
+	margin: 20px;
+	border-radius: 50%;
+	z-index: 1;
+	box-sizing: content-box;
+	padding: 6px;
+	background-color: #28a71b;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		object-position: center;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+		border-radius: 50%;
+		z-index: 0;
+		background: #fff;
+		transition: 0.5s;
+		z-index: -1;
+		animation: pulse 2s infinite;
+	}
+
+
+
+	&::after {
+		transform: scale(1.3);
+		opacity: 0;
+	}
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1.3);
+		opacity: 1;
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 0;
+	}
+}

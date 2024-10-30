@@ -1,0 +1,54 @@
+.footer {
+	padding-top: 100px;
+	padding-bottom: 70px;
+}
+
+.footer__wrap {
+	display: flex;
+	justify-content: space-between;
+	@media(max-width: 767px) {
+		flex-direction: column;
+		gap: 24px;
+	}
+}
+
+.footer__col {
+	display: flex;
+	flex-direction: column;
+	&--links {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		a {
+			text-transform: uppercase;
+		}
+	}
+	&:first-child {
+		@media(max-width: 767px) {
+			margin-bottom: 28px;
+		}
+	}
+}
+
+.footer__politic {
+	text-decoration: underline;
+}
+
+.footer__logo {
+	margin-bottom: 12px;
+}
+
+.footer__col-title {
+	margin-bottom: 24px;
+	font-size: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.footer__links {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	font-size: 14px;
+	font-weight: 400;
+}

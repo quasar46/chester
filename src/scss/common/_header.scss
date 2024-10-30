@@ -1,0 +1,50 @@
+.header {
+	transition: all 0.3s ease;
+	background: #141414CC;
+
+	&--fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		// background-color: #000;
+		z-index: 100;
+		transition: all 0.3s ease;
+	}
+}
+
+.header__wrap {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 32px 0;
+}
+
+.header__logo {
+	margin-right: 95px;
+	max-width: 175px;
+	width: 100%;
+}
+
+
+
+.header__phone {
+	margin-left: auto;
+	text-transform: uppercase;
+	text-decoration: underline;
+	font-weight: 600;
+	@media(max-width: 767px) {
+		display: none;
+	}
+}
+
+.menu__item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 6px;
+	.dropdown {
+		display: none;
+	}
+}

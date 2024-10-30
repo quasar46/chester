@@ -1,0 +1,20 @@
+.swiper-button {
+
+	&-prev,
+	&-next {
+		width: 52px;
+		height: 52px;
+		background-size: 52px auto;
+		&::after {
+			display: none;
+		}
+	}
+
+	&-prev {
+		background-image: url("../img/arrow-prev.svg");
+	}
+
+	&-next {
+		background-image: url('../img/arrow-next.svg');
+	}
+}
