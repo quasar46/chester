@@ -72,8 +72,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	})
 	let showHideButton = function () {
 		window.scrollY > 300
-			? scrollTop.classList.add('--visible')
-			: scrollTop.classList.remove('--visible')
+			? scrollTop.classList.add('--vis')
+			: scrollTop.classList.remove('--vis')
 	}
 
 	window.addEventListener('scroll', showHideButton)

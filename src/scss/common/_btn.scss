@@ -65,7 +65,7 @@
 	cursor: pointer;
 	z-index: 1000;
 
-	&.--visible {
+	&.--vis {
 		opacity: 1;
 		transition: all 0.3s ease;
 	}
