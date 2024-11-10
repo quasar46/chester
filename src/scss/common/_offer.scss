@@ -21,6 +21,10 @@
 		&:not(:last-child) {
 			border-bottom: 1px solid #fff;
 		}
+
+		&:last-child {
+			max-width: 600px;
+		}
 	}
 
 	&-title {

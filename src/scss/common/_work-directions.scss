@@ -1,0 +1,43 @@
+.work-directions {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 32px;
+	&__img {
+		border-radius: 20px;
+		overflow: hidden;
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__links {
+		display: flex;
+		flex-direction: column;
+		gap: 18px;
+
+		a {
+			background: #252525;
+			border-radius: 12px;
+			font-size: 16px;
+			font-weight: 400;
+			height: 56px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0 24px;
+
+			&::after {
+				content: "";
+				background-image: url(../img/arrow-box.svg);
+				width: 32px;
+				height: 32px;
+				flex: 1 0 auto;
+				max-width: 32px;
+				background-size: 32px auto;
+				background-repeat: no-repeat;
+			}
+		}
+	}
+}

@@ -117,7 +117,14 @@
 
 .directions__pic {
 	border-radius: 20px;
-	object-fit: cover;
+	height: 214px;
+	overflow: hidden;
+
+	img {
+		object-fit: cover;
+		height: 100%;
+		width: 100%;
+	}
 
 	@media(max-width: 767px) {
 		height: 214px;

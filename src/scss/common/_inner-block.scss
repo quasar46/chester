@@ -1,0 +1,31 @@
+.inner-block {
+	min-height: 1000px;
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+
+	&__title {
+		font-size: 81px;
+		font-weight: 500;
+		text-transform: uppercase;
+
+		@media(max-width: 767px) {
+			font-size: 32px;
+		}
+	}
+
+	&__content {
+		margin-left: auto;
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+
+		p {
+			font-size: 24px;
+			font-weight: 500;
+			@media(max-width: 767px) {
+				font-size: 16px;
+			}
+		}
+	}
+}

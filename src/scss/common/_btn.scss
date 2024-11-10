@@ -16,6 +16,15 @@
 	justify-content: center;
 	cursor: pointer;
 
+	&--primary {
+		font-size: 16px;
+		background-color: #fff;
+		color: var(--color-black);
+		@media(max-width: 767px) {
+			font-size: 14px;
+		}
+	}
+
 	&--main {
 		&:hover {
 			background-color: #fff;
