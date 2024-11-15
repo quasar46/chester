@@ -14,14 +14,26 @@
 	color: #ffffff;
 	text-align: center;
 	justify-content: center;
+	transition: all 0.3s ease;
 	cursor: pointer;
+
+	&:hover {
+		background-color: white;
+		color: var(--color-black);
+	}
 
 	&--primary {
 		font-size: 16px;
 		background-color: #fff;
 		color: var(--color-black);
+
 		@media(max-width: 767px) {
 			font-size: 14px;
+		}
+
+		&:hover {
+			background: rgba(255, 255, 255, .4);
+			color: #fff;
 		}
 	}
 
@@ -60,6 +72,7 @@
 		animation: shine 2s infinite linear;
 		/* Анимация блика */
 	}
+
 }
 
 .scroll-top {
@@ -74,9 +87,15 @@
 	cursor: pointer;
 	z-index: 1000;
 
-	&.--vis {
+	&.vis {
 		opacity: 1;
 		transition: all 0.3s ease;
+	}
+	@media(max-width: 767px) {
+		width: 40px;
+		height: 40px;
+		right: 30px;
+		bottom: 80px;
 	}
 }
 

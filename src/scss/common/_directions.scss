@@ -14,6 +14,20 @@
 	@media(max-width: 767px) {
 		padding: 24px 16px;
 	}
+
+	&:hover {
+		background-color: #fff;
+		color: var(--color-black);
+		transition: all 0.3s ease;
+
+		.directions__list a:not(:last-child) {
+			border-bottom-color: var(--color-black);
+		}
+
+		svg path {
+			stroke: var(--color-black);
+		}
+	}
 }
 
 .directions__content {
@@ -42,32 +56,6 @@
 	}
 }
 
-// .grid-item {
-// 	&-1 {
-// 		grid-area: item1;
-// 	}
-
-// 	&-2 {
-// 		grid-area: item2;
-// 	}
-
-// 	&-3 {
-// 		grid-area: item3;
-// 	}
-
-// 	&-4 {
-// 		grid-area: item4;
-// 	}
-
-// 	&-5 {
-// 		grid-area: item5;
-// 	}
-
-// 	&-6 {
-// 		grid-area: item6;
-// 	}
-// }
-
 .directions__list {
 	a {
 		position: relative;
@@ -76,16 +64,12 @@
 		justify-content: space-between;
 		align-items: center;
 
-		&::after {
-			content: "";
-			background-image: url("../img/arrow-box.svg");
-			width: 32px;
+		svg {
+			min-width: 32px;
 			height: 32px;
-			flex: 1 0 auto;
-			max-width: 32px;
-			background-size: 32px auto;
-			background-repeat: no-repeat;
+			border-radius: 50%;
 		}
+
 
 		&:not(:last-child) {
 			margin-bottom: 12px;
@@ -93,9 +77,14 @@
 		}
 
 		&:hover {
-			&::after {
-				background-color: rgba(255, 255, 255, 0.2);
-				border-radius: 50%;
+
+			svg path {
+				stroke: white;
+			}
+
+			svg {
+				background-color: var(--color-black);
+				transition: all 0.3s ease;
 			}
 		}
 

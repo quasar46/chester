@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-	ymaps.ready(init);
+	if (document.querySelector('#map')) {
+		ymaps.ready(init);
+	}
+
 	function init() {
 		var myMap = new ymaps.Map("map", {
 			center: [55.741414, 37.579286],

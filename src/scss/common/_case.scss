@@ -105,11 +105,21 @@
 			font-size: 0;
 		}
 	}
+
+	@media(max-width: 767px) {
+		order: -1;
+	}
 }
 
 .case__swiper-1 {
 	position: static;
 
+	.swiper-slide {
+		@media(max-width: 767px) {
+			display: flex;
+			flex-direction: column;
+		}
+	}
 }
 
 .case-swiper-1-wrap {
@@ -117,28 +127,15 @@
 	padding: 0 74px;
 
 	.swiper {
+		position: static;
+
 		@media(max-width: 767px) {
 			position: relative;
 			padding-bottom: 76px;
 		}
 	}
 
-	.swiper-nav {
-		&>* {
-			@media(max-width: 767px) {
-				position: static;
-			}
-		}
 
-		@media(max-width: 767px) {
-			position: absolute;
-			bottom: 0;
-			left: 50%;
-			transform: translateX(-50%);
-			display: flex;
-			gap: 32px;
-		}
-	}
 
 	@media(max-width: 767px) {
 		padding: 0;

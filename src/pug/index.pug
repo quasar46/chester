@@ -1,16 +1,22 @@
 extends layout
+block vars 
+	- var page = "index"
+	- var header = "Честер-К"
 block main 
 	main
 		section.section.main-block 
+			picture.main-block__img#bg
+				source(srcset="img/bg-main-block.webp" media="(min-width: 768px)")
+				img(src="img/bg-main-block-mobile.webp" alt="")
 			.container
-				.main-block__wrap 
+				.main-block__wrap
 					.main-block__top-content
 						h1.main-block__title #{header}
 						.main-block__aside 	
 							.main-block__aside-block
 								span ЮРИДИЧЕСКОЕ АГЕНТСТВО
 								span est. 1999
-							button.btn.btn--main.show-popup КОНСУЛЬТАЦИЯ С ЮРИСТОМ
+							button.btn.btn--main.show-modal КОНСУЛЬТАЦИЯ С ЮРИСТОМ
 					.main-block__benefici
 						.main-block__benefici-item
 							h2.main-block__benefici-title Работаем по всем направлениям права
@@ -30,75 +36,7 @@ block main
 
 		include modules/feedback
 
-		section.section.directions 
-			.container
-				.directions__wrap 
-					h2.section__title.directions__title РАБОТАЕМ ПО ВСЕМ НАПРАВЛЕНИЯМ <br> ПРАВА НА ЛЮБОЙ СТАДИИ ДЕЛА
-					p.section__subtitle.directions__subtitle Побывали во всех судах Москвы и МО, поработали со всеми судьями и по всей территории РФ, включая новые области
-					.directions__content 
-						.directions__box 
-							a(href="").directions__head
-								img(alt="" src="img/Handshake.svg")
-								| юридическое сопровождение бизнеса
-							.directions__list
-								a(href="")  Юридическое сопровождение деятельности юридических лиц, ИП, самозанятых
-								a(href="")  Бухгалтерское сопровождение деятельности юридических лиц, ИП
-								a(href="")  Ведение кадрового учета юридических лиц, ИП
-						.directions__box
-							a(href="").directions__head 
-								img(alt="" src="img/Chester-Kfamily.svg") 
-								| Семейные споры
-							.directions__list
-								a(href="")  Взыскание алиментов
-								a(href="")  Ограничение и лишение прав родителей
-								a(href="")  Определение места проживания ребенка
-								a(href="")  Расторжение брака
-								a(href="")  Споры по наследству
-								a(href="")  Раздел совместно нажитого имущества
-								a(href="")  Определение порядка участия родителя в воспитании ребенка
-								a(href="")  Установление и оспаривание отцовства и материнства
-						.directions__box 
-							a(href="").directions__head
-								img(alt="" src="img/Chester-Kdesign.svg")
-								| трудовые споры
-							.directions__list 
-								a(href="") Проведение трудового аудита
-								a(href="") Сопровождение увольнения работника
-								a(href="") Представление интересов в судах по трудовым спорам с работником
-								a(href="") Сопровождение увольнения 
-								a(href="") Досудебное сопровождение при конфликтной ситуации с работодателем
-								a(href="") Представление интересов в судах по трудовым спорам с работодателем
-							.directions__list 
-						.directions__box 
-							a(href="").directions__head 
-								img(alt="" src="img/family-home-svgrepo-com1.svg")
-								| Недвижимость
-							.directions__list 
-								a(href="")  Сопровождение сделок с недвижимостью 
-								a(href="")  Жилищные споры
-								a(href="")  Арбитраж по недвижимости
-								a(href="")  Оспаривание сделок , включая споры о банкротстве
-								a(href="")  Оспаривание кадастровой стоимости
-								a(href="")  Споры о сносе самовольных построек
-								a(href="") Легализация самовольных построек через ГЗК
-								a(href="") Сопровождение реконструкции, нового строительства
-								a(href="") Земельные споры
-						.directions__box 
-							a(href="").directions__head
-								img(alt="" src="img/Scales.svg")
-								| Представительство в судах
-							.directions__list 
-								a(href="")  Суды общей юрисдикции по гражданским, административным делам
-								a(href="")  Арбитраж
-								a(href="")  Суды по уголовным делам
-						.directions__box 
-							a(href="").directions__head
-								img(alt="" src="img/salaryman-svgrepo-com1.svg")
-								| уголовное право
-							.directions__pic
-								img(alt="" src="img/pic3.webp")
-
-
+		include modules/directions
 
 		include modules/achiev
 

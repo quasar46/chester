@@ -21,6 +21,11 @@
 		border-radius: 80px;
 		width: auto;
 		flex: 1 0 auto;
+		transition: all 0.3s ease;
+		&:hover {
+			background-color: #fff;
+			color: var(--color-black);
+		}
 
 		@media(max-width: 767px) {
 			font-size: 14px;

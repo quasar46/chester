@@ -1,12 +1,18 @@
-.popup {
-	position: relative;
-	padding: 42px 16px;
-	background: #212121;
+.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 50%;
 	max-width: 343px;
 	width: 100%;
-	display: flex;
-	flex-direction: column;
-	gap: 42px;
+	min-width: 300px;
+	height: auto;
+	z-index: 20;
+	visibility: hidden;
+	backface-visibility: hidden;
+	opacity: 0;
+	transform: translate(-50%, -50%);
+	transition: all 0.5s;
 
 	&__title {
 		font-size: 18px;
@@ -23,9 +29,31 @@
 		flex-direction: column;
 		gap: 18px;
 	}
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+
+		.modal__content {
+			transform: scale(1);
+			opacity: 1;
+			transition: all 0.3s;
+
+		}
+	}
 }
 
-.popup__close {
+.modal__content {
+	display: flex;
+	flex-direction: column;
+	gap: 42px;
+	opacity: 0;
+	padding: 42px 16px;
+	transform: scale(0.7);
+	background: #212121;
+}
+
+.modal__close {
 	position: absolute;
 	width: 24px;
 	height: 24px;
@@ -34,7 +62,7 @@
 	cursor: pointer;
 }
 
-.popup__form {
+.modal__form {
 	input {
 		border-radius: 25px;
 		outline: none;
@@ -57,7 +85,7 @@
 	}
 }
 
-.popup__form-values {
+.modal__form-values {
 	display: flex;
 	flex-direction: column;
 	gap: 12px;
@@ -84,10 +112,15 @@
 	width: 100%;
 	height: 100%;
 	background: rgba(0, 0, 0, 0.75);
-	display: none;
+	display: flex;
 	align-items: center;
 	justify-content: center;
+	opacity: 0;
+	z-index: -1;
+	transition: all 0.3s ease;
+
 	&.active {
-		display: flex;
+		opacity: 1;
+		z-index: 1;
 	}
 }

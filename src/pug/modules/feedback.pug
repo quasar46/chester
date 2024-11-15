@@ -1,7 +1,6 @@
 section.section.offer 
 	.container 
 		.offer__wrap 
-			//- .offer__sticky Первая <br> консультация
 			.offer__aside 
 				h2.section__title.offer__title ПЕРВАЯ БЕСПЛАТНАЯ <br> КОНСУЛЬТАЦИЯ ПО ТЕЛЕФОНУ
 				ul.offer__list 
@@ -23,6 +22,6 @@ section.section.offer
 					p Для юридических лиц можем приехать в ваш офис с директом и главным юристом.
 			form.form
 				.form__inputs 
-					input(type="text" placeholder="Имя")
-					input.phone-field(type="text" placeholder="Номер телефона")
+					input(type="text" placeholder="Имя" required)
+					input.phone-field(type="text" placeholder="Номер телефона" required)
 				input.form__btn(type="submit" value="ЗАПИСАТЬСЯ" onsubmit="ym(62967727,'reachGoal','forma_obrat_sv'); return true;")

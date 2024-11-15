@@ -125,9 +125,9 @@ gulp.task("server", function () {
 	gulp.watch("src/js/*.js", gulp.series("js", "refresh"));
 	gulp.watch("src/img/**/*.*", gulp.series("exportWebP", "refresh"));
 	gulp.watch("src/img/**/*.*", gulp.series("svg", "refresh"));
-	gulp.watch("src/fonts/*.*", gulp.series("fonts", "refresh"));
+	// gulp.watch("src/fonts/*.*", gulp.series("fonts", "refresh"));
 	gulp.watch("src/vendor/*.*", gulp.series("vendor", "refresh"));
-	gulp.watch("src/scss/utils/stylesheet.css", gulp.series("stylesheet", "refresh"));
+	// gulp.watch("src/scss/utils/stylesheet.css", gulp.series("stylesheet", "refresh"));
 });
 
 gulp.task("refresh", function (done) {
@@ -139,5 +139,5 @@ gulp.task("clean", function () {
 	return del("build");
 });
 
-gulp.task("build", gulp.series("clean", "fonts", "stylesheet", "css", "exportWebP", "svg", "pug", "media", "js", "vendor"));
+gulp.task("build", gulp.series("clean", "css", "exportWebP", "svg", "pug", "media", "js", "vendor"));
 gulp.task("start", gulp.series("build", "server"));

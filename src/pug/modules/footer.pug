@@ -8,21 +8,23 @@ footer.footer
 			.footer__col 
 				.footer__col-title направлениям
 				.footer__links
-					a(href="") Семейные споры 
+					a(href="disputs.html") Семейные споры 
 					a(href="") Юридические услуги по недвижимости
 					a(href="") Представительство в судах
 					a(href="") Юридическое сопровождение бизнеса
 			.footer__col.footer__col--links
-				a(href="") Полезные статьи
-				a(href="") Контакты  
+				a(href="blog.html") Полезные статьи
+				a(href="contacts.html") Контакты  
 			.footer__col 
-				a.btn.btn--main.show-popup Консультация с юристом 
+				a.btn.btn--main.show-modal Консультация с юристом 
 
 button.scroll-top 
 	img(alt="" src="img/scroll-top.svg")
 
 .social-wrap
+	a(href="https://t.me/legalagencyChester" target="_blank" onclick="ym(62967727,'reachGoal','messenger'); return true;").iconanim.iconanim2
+		img(alt="" src="img/tg-icn.webp")
 	a(href="https://wa.me/79037900360" target="_blank" onclick="ym(62967727,'reachGoal','messenger'); return true;").iconanim
 		img(alt="" src="img/wp-icn.webp")
 
-include popup
+include modal

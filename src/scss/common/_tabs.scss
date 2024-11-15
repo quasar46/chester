@@ -16,11 +16,12 @@
 		font-weight: 400;
 		height: 38px;
 		cursor: pointer;
-
+		
 		&.active,
 		&:hover {
 			background-color: #fff;
 			color: #000;
+			transition: all 0.3s ease;
 		}
 
 		@media(max-width: 767px) {

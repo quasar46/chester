@@ -1,27 +1,25 @@
 extends layout	
 block vars
-	-var header = 'Семейные споры'
+	-var header = 'Раздел совместно нажитого имущества'
 block main 
 	main
 		section.section.main-block 
 			.main-block__img
-				img(src="img/bg2.webp", alt="")
+				img(src="img/bg2.webp" alt="")
 			.container
 				.breadcrumbs 
 					.breadcrumbs__wrap
 						a(href="index.html") Главная
 						span /
-						a Семейные споры
+						a(href="disputs.html") Семейные споры
+						span /
+						a Раздел совместно нажитого имущества
+
 				section.section.inner-block
 					h1.title #{header}
 					.inner-block__content 
 						p ЮРИДИЧЕСКОЕ АГЕНТСТВО ЧЕСТЕР - К
 						a.btn.show-modal Консультация с юристом
-					.links
-						a(href="") Алиментов 
-						a(href="") Ограничение и лишение прав родителей
-						a(href="") Определение места проживания ребенка
-						a(href="") Расторжение брака
 					.main-block__benefici
 						.main-block__benefici-item
 							h2.main-block__benefici-title более 25 лет практического опыта
@@ -39,7 +37,7 @@ block main
 								p С опытом в профессии от 10 до 42 лет.
 								p При этом работающие в нашем агентстве минимум 7 лет, с узкой специализацией доведут дело до победы
 		include modules/feedback
-		include modules/work-directions
+		//- include modules/work-directions
 		//- include modules/case-inner
 		include modules/price
 		include modules/achiev

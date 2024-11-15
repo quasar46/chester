@@ -1,10 +1,46 @@
 .error {
 	display: flex;
+	align-items: center;
 	gap: 90px;
+
+	h1 {
+		font-size: 42px;
+		@media(max-width: 767px) {
+			font-size: 24px;
+		}
+	}
+
+	p {
+		font-size: 18px;
+		font-weight: 500;
+
+		a {
+			color: rgba(138, 138, 138, 1);
+			text-decoration: underline;
+		}
+		@media(max-width: 767px) {
+			font-size: 14px;
+		}
+	}
+	@media(max-width: 767px) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
 }
 
 .error__number {
 	font-size: 220px;
 	font-weight: 900;
-	color: #fff;	
+	color: #fff;
+	@media(max-width: 767px) {
+		order: -1;
+		font-size: 152px;
+	}
+}
+
+.error__content {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 42px;
 }
