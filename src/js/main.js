@@ -143,11 +143,17 @@ document.addEventListener('DOMContentLoaded', function () {
 	window.addEventListener('scroll', showHideButton)
 	showHideButton()
 
-	if (document.querySelector('.tab-container') || document.querySelector('.tab-container2') || document.querySelector('.tab-container3')) {
+	if (document.querySelector('.tab-container')) {
 		var tabs1 = document.querySelector('.tab-container')
 		tabs(tabs1);
+	}
+
+	if (document.querySelector('.tab-container2')) {
 		var tabs2 = document.querySelector('.tab-container2')
 		tabs(tabs2);
+	}
+
+	if (document.querySelector('.tab-container3')) {
 		var tabs3 = document.querySelector('.tab-container3')
 		tabs(tabs3);
 	}
