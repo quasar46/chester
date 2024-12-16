@@ -1,0 +1,61 @@
+extends ../layout
+block vars
+	-var titlePage = "Арбитражные споры | Юридическое агентство Честер-К"
+	-var title = 'Споры в арбитражном суде'
+	-var isAncherStaff = true
+	-var isAncherReviews = true
+	-var feedbackTitle = "Записаться на оценку перспектив дела"
+	-var offerTitle1 = "ЧЕСТНАЯ ОЦЕНКА ПЕРСПЕКТИВ ДЕЛА"
+	-var offerTitle2 = "ОЦЕНИМ СТОИМОСТЬ РАБОТ И ДАДИМ АЛГОРИТМ ДЕЙСТВИЙ"
+	-var offerText1 = "Оцениваем сложность, рассчитываем финальный размер иска и сроки возврата задолженности."
+	-var offerText2 = "Учитываем претензии, встречные иски, другие действия со стороны оппонента."
+	-var offerText3 = "Честно скажем шансы на победу без обещаний несбыточных результатов на основе 25-ти летней практики и знания судебного правоприменения"
+	-var offerText4 = "Точно поймём, сколько будет стоить вести дело, — без внезапных доплат."
+	-var offerText5 = "Расскажем отработанный за 25 лет алгоритм действий, нужный для победы."
+	-var offerText6 = "Для анализа потребуется предоставить документы касающиеся спорной ситуации"
+	-var titlePrice = "ПО Спорам в арбитражном суде"
+	-var price1 = "50 000"
+	-var price2 = "250 000"
+	-var metaTitle = "Честер – К по спорам в арбитражном суде"
+	-var metaDiscription = "Помощь профильного юриста в арбитражных суда. Бесплатная консультация, 96% выигранных дел, честная оценка перспектив дела на первом звонке"
+block main 
+	main
+		section.section.main-block 
+			.main-block__img
+				img(src="img/bg18.webp" alt="")
+			.container
+				.breadcrumbs 
+					.breadcrumbs__wrap
+						a(href="index.html") Главная
+						span / 
+						a(href="predstavitelstvo_v_sudah.html") Представительство в судах
+						span /
+						a #{title}
+				section.section.inner-block
+					h1.title(data-aos="fade-right") #{title}
+					.inner-block__content 
+						p ЮРИДИЧЕСКОЕ АГЕНТСТВО ЧЕСТЕР - К
+						a.btn.show-modal Консультация с юристом
+					.main-block__benefici
+						.main-block__benefici-item
+							h2.main-block__benefici-title более 25 лет практического опыта
+							.main-block__benefici-text
+								p При первом общении честно расскажем о перспективах дела, а также полностью вникнем в каждую ситуацию и доведем до уверенной победы!ы!
+						.main-block__benefici-item
+							h2.main-block__benefici-title 96% выигранных дел
+							.main-block__benefici-text
+								p За счёт гигантского опыта в 25 лет, практики во всех судах Москвы и  во всех регионах России, включая «новые». В остальных 4% дел снижали взыскиваемые суммы на 30-70%. Финансово заинтересованы в вашей победе
+						.main-block__benefici-item
+							h2.main-block__benefici-title команда юристов и адвокатов
+							.main-block__benefici-text
+								p С опытом работы в профессии от 10 до 42 лет и стажем работы в нашем агентстве не менее 7 лет. Специализируются в спорах по недвижимости и мягко доведут ваше дело до победы.
+
+		include ../modules/feedback3
+		include ../modules/price
+		include ../modules/achiev
+		include ../modules/staff
+		include ../modules/case
+
+		include ../modules/reviews
+		include ../modules/block-contact
+		//- include ../modules/case

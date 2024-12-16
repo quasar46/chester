@@ -1,12 +1,34 @@
 block vars
-	- var header = 'ЧЕСТЕР-К'
+
 doctype html
 html(lang="ru")
-	include modules/head
+	head 
+		meta(charset="utf-8")
+		title #{titlePage}
+		meta(content="ie=edge" http-equiv="x-ua-compatible")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		meta(name="viewport-extra" content="width=device-width,initial-scale=1,min-width=375")
+		meta(name="title" content=metaTitle)
+		meta(name="discription" content=metaDiscription)
+		link(rel="icon" href="favicon.png")
+		link(rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'")
+		link(rel="stylesheet" href="css/style.min.css")
+		script
+			include modules/ya-metrika.js
 	body
 		<noscript><div><img src="https://mc.yandex.ru/watch/62967727" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 		.wrapper
 			include modules/header
 			block main
-			include modules/footer
-			include modules/script
+			block footer 
+				include modules/footer
+			block scripts
+				script(src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous")
+				script(src="https://unpkg.com/aos@next/dist/aos.js")
+				script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js")
+				script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js")
+				script(src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js")
+				script(src="js/tabs.js")
+				script(src="js/menu.js")
+				script(src="js/acc.min.js")
+				script(src="js/main.js")

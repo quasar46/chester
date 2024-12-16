@@ -1,0 +1,61 @@
+ul.menu 
+	li.menu__has-child
+		a(href="") Услуги
+		.submenu 
+			.submenu__inner 
+				ul
+					li.menu__has-child
+						a(href="semejnye-spory.html") Семейные споры
+						ul.submenu
+							li
+								a(href="") Взыскание алиментов
+							li
+								a(href="") Ограничение и лишение прав родителей
+							li
+								a(href="") Определение места проживания ребенка
+							li
+								a(href="") Расторжение брака
+							li
+								a(href="") Наследственные споры
+							li
+								a(href="") Раздел совместно нажитого имущества
+							li
+								a(href="") Определение порядка участия родителя в воспитании ребенка
+							li
+								a(href="") Установление и оспаривание отцовства и материнства
+					li
+						a(href="") Юридическое сопровождение бизнеса
+						ul
+							li
+								a(href="") Lorem, ipsum. 
+							li
+								a(href="") Lorem, ipsum dolor.
+							li
+								a(href="") Lorem, ipsum.
+							li
+								a(href="") Lorem, ipsum.
+							li
+								a(href="") Lorem ipsum dolor sit.
+					li
+						a(href="") Трудовые споры
+					li
+						a(href="") Недвижимость 
+					li
+						a(href="") Представительство в судах
+					li
+						a(href="") Уголовные споры
+
+	li
+		if isAncherStaff == true
+			a(href="#staff") Юристы и адвокаты
+		else 
+			a(href="index.html#staff") Юристы и адвокаты
+	li
+		if isAncherReviews == true
+			a(href="#reviews") Отзывы
+		else 
+			a(href="index.html#reviews") Отзывы 
+	li
+		a(href="blog.html") Полезные статьи
+	li
+		a(href="") Контакты

@@ -1,5 +1,24 @@
 // custome code
 document.addEventListener('DOMContentLoaded', function () {
+	const heightHeader = document.querySelector('header').clientHeight
+	const els = document.querySelectorAll('.submenu ul ul')
+	if (window.innerWidth > 1210) {
+		els.forEach(el => {
+			console.log(el)
+			let posEl = el.getBoundingClientRect()
+			el.style.marginTop = `calc(-${posEl.top}px + ${heightHeader}px)`;
+			console.log(el)
+		})
+	} else {
+		const menuLinks = document.querySelectorAll('.menu__has-child')
+		menuLinks.forEach(link => {
+			link.addEventListener('click', function (e) {
+				link.classList.add('active')
+				e.preventDefault()
+				link.querySelector('.submenu').classList.add('show')
+			})
+		})
+	}
 	const menuBtn = document.querySelector('.burger')
 	const menu = document.querySelector('.menu')
 	const body = document.querySelector('body')
@@ -8,6 +27,13 @@ document.addEventListener('DOMContentLoaded', function () {
 		menu.classList.toggle('active')
 		body.classList.toggle('hidden')
 	})
+
+	if (window.innerWidth < 1210) {
+		const newLi = document.createElement('span')
+		menu.append(newLi)
+		newLi.append(document.querySelector('.header__phone'))
+		menu.style.height = `calc(100vh - ${heightHeader}px)`
+	}
 
 	const swiper1 = new Swiper('.staff__swiper', {
 		slidesPerView: 3,
@@ -102,13 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	})
 
-	const menuItems = document.querySelectorAll('.menu__item');
-	menuItems.forEach(item => {
-		item.addEventListener('click', function () {
-			this.querySelector('.dropdown').classList.toggle('active');
-			this.querySelector('svg').classList.toggle('active');
-		})
-	})
+
 
 	const scrollTop = document.querySelector('.scroll-top')
 	scrollTop.addEventListener('click', ev => {
@@ -123,13 +143,14 @@ document.addEventListener('DOMContentLoaded', function () {
 	window.addEventListener('scroll', showHideButton)
 	showHideButton()
 
-	if (document.querySelector('.tab-container') || document.querySelector('.tab-container2')) {
+	if (document.querySelector('.tab-container') || document.querySelector('.tab-container2') || document.querySelector('.tab-container3')) {
 		var tabs1 = document.querySelector('.tab-container')
 		tabs(tabs1);
 		var tabs2 = document.querySelector('.tab-container2')
 		tabs(tabs2);
+		var tabs3 = document.querySelector('.tab-container3')
+		tabs(tabs3);
 	}
-
 
 
 	// const body = document.querySelector('body')
@@ -168,11 +189,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	})
 
-
-	if (document.querySelector('.accordion-container')) {
-		new Accordion('.accordion-container');
-	}
-
 	// animate main bg
 	const bg = document.querySelector("#bg");
 	if (document.querySelector("#bg")) {
@@ -188,6 +204,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	}
 
+	AOS.init();
+
 	// valid form
 	// const inputs = document.querySelectorAll('form input')
 	// inputs.forEach(input=> {
@@ -196,8 +214,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	// 		input.classList.remove('error')
 	// 	})
 	// })
-
-
 })
 
 $(function () {
@@ -227,4 +243,35 @@ $(document).ready(function () {
 	jQuery.validator.addMethod("checkMaskPhone", function (value, element) {
 		return /\+\d{1}\(\d{3}\)\d{3}-\d{4}/g.test(value);
 	});
+})
+
+$(document).ready(function () {
+	$('form').submit(function (e) {
+		e.preventDefault();
+		let name = $(this).find('[name="name"]').val();
+		let tel = $(this).find('[name="tel"]').val();
+		$.ajax({
+			url: "https://wild-marketing.biz/chester/sendmail.php", // куда отправляем
+			type: "post", // метод передачи
+			data: { // что отправляем
+				"name": name,
+				"tel": tel,
+			},
+			error: function () {
+				console.log('форма не отправлена');
+			},
+			success: function (result) { /* В случае удачной обработки и отправки выполнится следующий код*/
+				window.location = "thanks.html";
+			}
+		})
+	})
+
+	if ($('#acc')) {
+		$("#acc").accordionjs();
+	}
+
+	if ($('#acc2')) {
+		$("#acc2").accordionjs();
+	}
+
 })

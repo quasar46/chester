@@ -1,0 +1,84 @@
+.menu 
+	.cd-dropdown-wrapper
+		a.cd-dropdown-trigger(href='#0') Услуги
+		nav.cd-dropdown
+			h2 Услуги
+			a.cd-close(href='#0') Close
+			ul.cd-dropdown-content
+				li.has-children
+					a(href='semejnye-spory.html') Семейные споры
+					ul.cd-secondary-dropdown.is-hidden
+						li.go-back 
+							a(href="#0") Меню 
+						li
+							a(href='vzyskanie_alimentov.html') Взыскание алиментов
+						li
+							a(href='ogranichenie_i_lishenie_prav_roditelej.html') Ограничение и лишение прав родителей
+						li
+							a(href='opredelenie_mesta_prozhivaniya_rebenka.html') Определение места проживания ребенка
+						li
+							a(href='rastorzhenie_braka.html') Расторжение брака
+						li
+							a(href='') Наследственные споры
+						li
+							a(href='service.html') Раздел совместно нажитого имущества
+						li
+							a(href='opredelenie_poryadka_uchastiya_roditelya_v_vospitanii_rebenka.html') Определение порядка участия родителя в воспитании ребенка
+						li
+							a(href='ustanovlenie_i_osparivanie_otcovstva_i_materinstva.html') Установление и оспаривание отцовства и материнства
+						li 
+							a(href="spory_po_nasledstvu.html") Споры по наследству 
+				li
+					a(href='soprovoshdenie_biznesa.html') Юридическое сопровождение бизнеса под ключ
+
+				li.has-children
+					a(href='') Трудовые споры
+
+				li.has-children
+					a(href='') Недвижимость 
+					ul.cd-secondary-dropdown.is-hidden
+						li.go-back 
+							a(href="#0") Меню 
+						li
+							a(href='spory_po_nedvizhimosti.html') Споры по недвижимости
+						li
+							a(href='sdelki_s_nedvizhimostyu.html') Сделки с недвижимостью
+						li
+							a(href='gosudarstvennaya_registraciya_perekhoda_ili_obladaniem_prava_sobstvennosti.html') Государственная регистрация перехода или обладанием права собственности
+						li
+							a(href='osparivanie_kadastrovoj_stoimosti.html') Оспаривание кадастровой стоимости
+						li
+							a(href='zhilishchnye_spory.html') Жилищные споры
+						li
+							a(href='spory_o_snose_samovolnyh_postroek_zdanij.html') Споры о сносе самовольных построек, зданий
+
+				li.has-children
+					a(href='') Представительство в судах
+					ul.cd-secondary-dropdown.is-hidden
+						li.go-back 
+							a(href="#0") Меню 
+						li
+							a(href='predstavitelstvo_v_sudah.html') Представительство в судах
+						li 
+							a(href="predstavitelstvo_v_sudah_po_ugolovnym_delam.html") Представительство в судах по уголовным делам 
+						li 
+							a(href="sudy_obshchej_yurisdikcii_po_grazhdanskim_administrativnym_delam.html") Суды общей юрисдикции по гражданским, административным делам 
+						li 
+							a(href="spory_v_arbitrazhnom_sude.html") Споры в арбитражном суде 
+
+
+				li.has-children
+					a(href='') Уголовные споры
+
+
+	if isAncherStaff == true
+		a(href="#staff") Юристы и адвокаты
+	else 
+		a(href="index.html#staff") Юристы и адвокаты
+
+	if isAncherReviews == true
+		a(href="#reviews") Отзывы
+	else 
+		a(href="index.html#reviews") Отзывы 
+	a(href="blog.html") Полезные статьи
+	a(href="contacts.html") Контакты

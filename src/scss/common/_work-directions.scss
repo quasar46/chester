@@ -2,6 +2,10 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 32px;
+	padding: 32px;
+	border: 1px solid #fff;
+	border-radius: 20px;
+	overflow: hidden;
 	&__img {
 		border-radius: 20px;
 		overflow: hidden;
@@ -26,7 +30,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			padding: 0 24px;
+			padding: 12px 24px;
 
 			&::after {
 				content: "";
@@ -38,10 +42,15 @@
 				background-size: 32px auto;
 				background-repeat: no-repeat;
 			}
+			@media(max-width: 767px) {
+				font-size: 14px;
+			}
 		}
 	}
 	@media(max-width: 767px) {
 		display: flex;
 		flex-direction: column;
+		border-radius: 25px;
+		padding: 32px 16px;
 	}
 }

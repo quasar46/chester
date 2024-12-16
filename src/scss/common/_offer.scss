@@ -23,7 +23,7 @@
 		}
 
 		&:last-child {
-			max-width: 600px;
+			// max-width: 600px;
 		}
 	}
 
@@ -37,11 +37,16 @@
 			font-size: 14px;
 			padding-bottom: 12px;
 		}
+
+		&--mode {
+			padding-bottom: 0;
+		}
 	}
 
 	&-text {
 		font-size: 16px;
 		font-weight: 500;
+		margin-bottom: 20px;
 		// color: rgba(255, 255, 255, 0.6);
 		color: white;
 

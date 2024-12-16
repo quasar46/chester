@@ -1,0 +1,141 @@
+.tasks {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 40px;
+
+	.tabs {
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+
+		.tab {
+			display: flex;
+			align-items: center;
+			padding: 0 32px;
+			min-height: 84px;
+			background: rgba(255, 255, 255, 0.05);
+			border-radius: 25px;
+			font-size: 16px;
+			font-weight: 600;
+			text-transform: uppercase;
+
+			&.active {
+				background-color: #fff;
+				color: #202020;
+			}
+		}
+	}
+
+	.tab-pane {
+		background: rgba(255, 255, 255, 0.05);
+		border-radius: 25px;
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+			padding: 32px;
+			border-radius: 25px;
+			font-size: 16px;
+			font-weight: 400;
+
+			li {
+				min-height: 32px;
+				padding-left: calc(32px + 18px);
+				background-image: url("../img/check-custom.svg");
+				background-size: 32px auto;
+				background-repeat: no-repeat;
+				background-position: left center;
+			}
+		}
+	}
+
+	@media(max-width: 767px) {
+		display: none;
+	}
+}
+
+.tasks-mobile {
+	color: var(--color-black);
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+
+	.acc_section {
+		border: none !important;
+		padding: 0 16px;
+		background: rgba(32, 32, 32, 1);
+		border-radius: 20px;
+		&.acc_active {
+			background-color: #fff;
+		}
+	}
+
+	li {
+		.acc_head {
+			position: relative;
+			font-size: 12px;
+			font-weight: 600;
+			text-transform: uppercase;
+			min-height: 92px;
+			display: flex !important;
+			align-items: center;
+			background: rgba(32, 32, 32, 1);
+			padding-right: 60px;
+			color: #fff;
+			line-height: 1.4;
+
+			&::after {
+				content: "";
+				position: absolute;
+				width: 52px;
+				height: 52px;
+				border-radius: 50%;
+				background-image: url("../img/arr-down.svg");
+				top: 50%;
+				right: 0;
+				transform: translateY(-50%);
+			}
+		}
+
+		.acc_content {
+			background-color: #fff;
+			font-size: 14px;
+			font-weight: 400;
+			padding-bottom: 16px;
+			padding-top: 24px;
+
+			ul {
+				display: flex;
+				flex-direction: column;
+				gap: 24px;
+
+				li {
+					padding-left: calc(18px + 32px);
+					background-image: url("../img/piechart2.svg");
+					background-size: 32px auto;
+					background-position: left top;
+					min-height: 32px;
+					background-repeat: no-repeat;
+				}
+			}
+		}
+
+		&.acc_active {
+			.acc_head {
+				background-color: #fff;
+				color: var(--color-black);
+				border-radius: 20px 20px 0 0;
+				border-bottom: 1px solid rgba(0, 0, 0, 1);
+
+				&::after {
+					background-image: url("../img/arr-up.svg");
+				}
+			}
+		}
+	}
+
+	@media(min-width: 768px) {
+		display: none;
+	}
+}

@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "common/aos";
+@import "common/acc";
 @import "base";
 @import "common/footer";
 @import "common/header";
@@ -18,7 +20,6 @@
 @import "common/reviews";
 @import "common/modal";
 @import "common/burger";
-@import "common/accordion";
 @import "common/iconanim";
 @import "common/menu";
 @import "common/error";
@@ -34,3 +35,6 @@
 @import "common/thanks";
 @import "common/blog";
 @import "common/article";
+@import "common/tasks";
+@import "common/advantages";
+@import "common/box4";

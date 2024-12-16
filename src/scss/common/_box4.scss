@@ -1,0 +1,133 @@
+.box4 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 42px;
+
+	&>* {
+		border-radius: 25px;
+		padding: 32px;
+		background: rgba(255, 255, 255, 0.05);
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+
+			li {
+				min-height: 32px;
+				background-image: url("../img/check-custom.svg");
+				background-size: 32px auto;
+				background-repeat: no-repeat;
+				background-position: left center;
+				padding-left: calc(32px + 18px);
+			}
+		}
+	}
+
+	@media(max-width: 767px) {
+		display: none;
+	}
+}
+
+.box4__head {
+	font-size: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-bottom: 24px;
+	display: flex;
+	align-items: center;
+	gap: 24px;
+}
+
+.box4-mobile {
+	display: none;
+	flex-direction: column;
+	gap: 24px;
+
+	.acc_section {
+		border: none !important;
+		padding: 0 16px;
+		background: rgba(32, 32, 32, 1);
+		border-radius: 20px;
+
+		&.acc_active {
+			background-color: #fff;
+			svg {
+				path {
+					stroke: var(--color-black);
+				}
+			}
+		}
+	}
+
+	li {
+		.acc_head {
+			position: relative;
+			font-size: 12px;
+			font-weight: 600;
+			text-transform: uppercase;
+			min-height: 92px;
+			display: flex !important;
+			align-items: center;
+			gap: 24px;
+			background: rgba(32, 32, 32, 1);
+			padding-right: 60px;
+			color: #fff;
+			line-height: 1.4;
+
+			&::after {
+				content: "";
+				position: absolute;
+				width: 52px;
+				height: 52px;
+				border-radius: 50%;
+				background-image: url("../img/arr-down.svg");
+				top: 50%;
+				right: 0;
+				transform: translateY(-50%);
+			}
+		}
+
+		.acc_content {
+			background-color: #fff;
+			font-size: 14px;
+			font-weight: 400;
+			padding-bottom: 16px;
+			padding-top: 24px;
+			color: var(--color-black);
+
+			ul {
+				display: flex;
+				flex-direction: column;
+				gap: 24px;
+
+				li {
+					display: flex;
+					align-items: center;
+					padding-left: calc(18px + 32px);
+					background-image: url("../img/piechart2.svg");
+					background-size: 32px auto;
+					background-position: left center;
+					min-height: 32px;
+					background-repeat: no-repeat;
+				}
+			}
+		}
+
+		&.acc_active {
+			.acc_head {
+				background-color: #fff;
+				color: var(--color-black);
+				border-radius: 20px 20px 0 0;
+				border-bottom: 1px solid rgba(0, 0, 0, 1);
+
+				&::after {
+					background-image: url("../img/arr-up.svg");
+				}
+			}
+		}
+	}
+	@media(max-width: 767px) {
+		display: flex;
+	}
+}

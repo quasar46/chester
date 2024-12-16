@@ -1,0 +1,19 @@
+extends ../layout
+block vars 
+	- var isAncherReviews = true
+block main 
+	main
+		section.section
+			.container
+				.thanks
+					.thanks__content
+						h1 СПАСИБО ЧТО ДОВЕРИЛИ ДЕЛО НАМ! 
+						p Свяжемся в ближайшее время для
+							|
+							br
+							| уточнения деталей дела
+					.thanks__img 
+						img(src="img/clock-svgrepo-com.svg" alt="")
+
+		include ../modules/case
+		include ../modules/reviews

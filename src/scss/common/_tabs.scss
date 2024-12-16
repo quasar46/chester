@@ -1,3 +1,7 @@
+.tab {
+	cursor: pointer;
+}
+
 .case__tabs {
 	display: flex;
 	flex-wrap: wrap;
@@ -15,8 +19,7 @@
 		font-size: 18px;
 		font-weight: 400;
 		height: 38px;
-		cursor: pointer;
-		
+
 		&.active,
 		&:hover {
 			background-color: #fff;
@@ -94,6 +97,7 @@
 
 .tab-pane {
 	display: none;
+
 	&.active {
 		display: block;
 	}

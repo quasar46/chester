@@ -1,0 +1,31 @@
+section.section.offer
+	.container 
+		.offer__wrap 
+			.offer__aside 
+				h2(data-aos="fade-right").section__title.offer__title БЕСПЛАТНАЯ ОЦЕНКА И АНАЛИЗ<br> ПЕРСПЕКТИВ ДЕЛА
+				ul.offer__list 
+					li.offer__list-item
+						span.offer__list-title #{offerTitle1}
+						.offer__list-text
+							p #{offerText1}
+							p #{offerText2}
+						.offer__list-text
+							p #{offerText3}
+					li.offer__list-item
+						span.offer__list-title #{offerTitle2}
+						.offer__list-text 
+							p #{offerText4}
+							p #{offerText5}
+						.offer__list-text
+							p #{offerText6}
+
+		.feedback 
+			.feedback__content 
+				span.feedback__title #{feedbackTitle}
+				.feedback__text 
+					p Для юридических лиц можем приехать в ваш офис с директом и главным юристом.
+			form.form
+				.form__inputs 
+					input(type="text" name="name" placeholder="Имя" required)
+					input.phone-field(type="text" name="tel" placeholder="Номер телефона" required)
+				input.form__btn(type="submit" value="оценить дело" onsubmit="ym(62967727,'reachGoal','forma_obrat_sv'); return true;")

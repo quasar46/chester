@@ -1,9 +1,9 @@
 section.section 
 	.container 
-		h2.section__title 
+		h2(data-aos="fade-right").section__title 
 			| ЦЕНЫ НА УСЛУГИ ЮРИСТА 
 			br
-			| ПО СЕМЕЙНОМУ ПРАВУ
+			| #{titlePrice}
 		.price 
 			.price__top 
 				.price__top-col 
@@ -14,9 +14,9 @@ section.section
 						li досудебного урегулирования или требуется судебное разбирательство
 				.price__total
 					span 
-						| ОТ 25 000 
+						| ОТ #{price1}
 						br 
-						| ДО 350 000
+						| ДО #{price2}
 
 			.price__body 
 				.price__item
@@ -36,4 +36,4 @@ section.section
 					| Узнайте точную цену
 					br
 					| и условия по телефону
-				a.btn.btn--primary(href="") Узнать точную цену 
+				a.btn.btn--primary.show-modal(href="") Узнать точную цену 

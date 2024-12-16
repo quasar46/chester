@@ -1,27 +1,28 @@
-section.section.offer 
+section.section.offer
 	.container 
 		.offer__wrap 
 			.offer__aside 
-				h2.section__title.offer__title ПЕРВАЯ БЕСПЛАТНАЯ <br> КОНСУЛЬТАЦИЯ ПО ТЕЛЕФОНУ
+				h2(data-aos="fade-right").section__title.offer__title ПЕРВАЯ БЕСПЛАТНАЯ <br> КОНСУЛЬТАЦИЯ ПО ТЕЛЕФОНУ
 				ul.offer__list 
 					li.offer__list-item
-						span.offer__list-title Консультирует или главный юрист, или юрист по нужному узкому профилю
-						p.offer__list-text Один из 11 наших юристов, чтобы сразу вникнуть в вопрос, сэкономить ваше время и помочь 
+						span.offer__list-title #{offerTitle1}
+						p.offer__list-text #{offerText1}
 					li.offer__list-item
-						span.offer__list-title ЧЕСТНАЯ ОЦЕНКА ПЕРСПЕКТИВ ДЕЛА
-						p.offer__list-text Честно скажем шансы на победу без обещаний несбыточных результатов на основе 25-ти летней практики и знания судебного правоприменения
+						span.offer__list-title #{offerTitle2}
+						p.offer__list-text #{offerText2}
 					li.offer__list-item
-						span.offer__list-title ОЦЕНИМ СТОИМОСТЬ РАБОТ И ДАДИМ АЛГОРИТМ ДЕЙСТВИЙ
-						p.offer__list-text Точно поймём сколько будет стоить вести дело, без внезапных доп. платежей. Расскажем отработанный за 25 лет алгоритм действий нужный для победы.
+						span.offer__list-title #{offerTitle3}
+						p.offer__list-text #{offerText3}
+						p.offer__list-text #{offerText4}
 
 		.feedback 
 			.feedback__content 
-				span.feedback__title Записаться на первую бесплатную консультацию юриста
+				span.feedback__title #{feedbackTitle}
 				.feedback__text 
 					p Если задача сложная, то запишем на живую 1-3-х часовую платную консультацию. Команда юристов погрузится в документы, историю дела, судебную практику и выдаст рекомендации.
 					p Для юридических лиц можем приехать в ваш офис с директом и главным юристом.
 			form.form
 				.form__inputs 
-					input(type="text" placeholder="Имя" required)
-					input.phone-field(type="text" placeholder="Номер телефона" required)
+					input(type="text" name="name" placeholder="Имя" required)
+					input.phone-field(type="text" name="tel" placeholder="Номер телефона" required)
 				input.form__btn(type="submit" value="ЗАПИСАТЬСЯ" onsubmit="ym(62967727,'reachGoal','forma_obrat_sv'); return true;")

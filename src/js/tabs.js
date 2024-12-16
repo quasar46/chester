@@ -1,22 +1,22 @@
-! function(name, definition) {
+! function (name, definition) {
   if (typeof module != 'undefined' && module.exports) module.exports = definition();
   else if (typeof define == 'function') define(definition);
   else this[name] = definition();
-}('tabs', function() {
+}('tabs', function () {
 
   return function tabs(container) {
     var tabs = container.querySelectorAll('.tab');
     var panes = container.querySelectorAll('.tab-pane');
 
-    each(tabs, function(i, tab) {
-      tab.addEventListener('click', function(e) {
+    each(tabs, function (i, tab) {
+      tab.addEventListener('click', function (e) {
         activate(tabs, i);
         activate(panes, i);
       });
     })
 
     function activate(tabs, index) {
-      each(tabs, function(i, tab) {
+      each(tabs, function (i, tab) {
         if (i != index) {
           removeClass(tab, 'active')
         } else {

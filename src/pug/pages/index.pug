@@ -1,0 +1,61 @@
+extends ../layout
+block vars 
+	-var page = "index"
+	-var title = "Честер-К"
+	-var isAncherStaff = true
+	-var isAncherReviews = true
+	-var feedbackTitle = "Записаться на первую бесплатную консультацию юриста"
+	-var offerTitle1 = "Консультирует или главный юрист, или юрист по нужному узкому профилю"
+	-var offerTitle2 = "ЧЕСТНАЯ ОЦЕНКА ПЕРСПЕКТИВ ДЕЛА"
+	-var offerTitle3 = "ОЦЕНИМ СТОИМОСТЬ РАБОТ И ДАДИМ АЛГОРИТМ ДЕЙСТВИЙ"
+	-var offerText1 = "Один из 11 наших юристов, чтобы сразу вникнуть в вопрос, сэкономить ваше время и помочь "
+	-var offerText2 = "Честно скажем шансы на победу без обещаний несбыточных результатов на основе 25-ти летней практики и знания судебного правоприменения"
+	-var offerText3 = "Точно поймём сколько будет стоить вести дело, без внезапных доп. платежей"
+	-var offerText4 = "Расскажем отработанный за 25 лет алгоритм действий нужный для победы"
+	-var metaTitle = "Юридическое агентство Честер-К все направления права и стадиям дела"
+	-var metaDiscription = "Честер-К бесплатная консультация, 96% выигранных дел, за 25 лет 1400 выполненных контрактов, команда узкоспециализированных юристов и адвокатов"
+block main 
+	main
+		section.section.main-block 
+			picture.main-block__img#bg
+				source(srcset="img/bg-main-block.webp" media="(min-width: 768px)")
+				img(src="img/bg-main-block-mobile.webp" alt="")
+			.container
+				.main-block__wrap
+					.main-block__top-content
+						h1.main-block__title(data-aos="fade-right") #{title}
+						.main-block__aside 	
+							.main-block__aside-block
+								span ЮРИДИЧЕСКОЕ АГЕНТСТВО
+								span est. 1999
+							button.btn.btn--main.show-modal КОНСУЛЬТАЦИЯ С ЮРИСТОМ
+					.main-block__benefici
+						.main-block__benefici-item
+							h2.main-block__benefici-title Работаем по всем направлениям права
+							.main-block__benefici-text
+								p Гражданское, административное, уголовное, корпоративное, семейное, трудовое, налоговое право
+								p На всех уровнях: от досудебного урегулирования, до верховного суда
+						.main-block__benefici-item
+							h2.main-block__benefici-title 96% выигранных дел
+							.main-block__benefici-text
+								p За счёт гигантского опыта в 25 лет и практики во всех судах Москвы и МО. В остальных 4% дел снижали взыскиваемые суммы на 30-70%.
+								p Финансово заинтересованы в вашей победе
+						.main-block__benefici-item
+							h2.main-block__benefici-title команда юристов и адвокатов
+							.main-block__benefici-text
+								p С опытом в профессии от 10 до 42 лет.
+								p При этом работающие в нашем агентстве минимум 7 лет, с узкой специализацией доведут дело до победы
+
+		include ../modules/feedback
+
+		include ../modules/directions
+
+		include ../modules/achiev
+
+		include ../modules/staff
+
+		include ../modules/case
+
+		include ../modules/reviews
+
+		include ../modules/block-contact

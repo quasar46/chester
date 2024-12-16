@@ -114,12 +114,7 @@
 .case__swiper-1 {
 	position: static;
 
-	.swiper-slide {
-		@media(max-width: 767px) {
-			display: flex;
-			flex-direction: column;
-		}
-	}
+
 }
 
 .case-swiper-1-wrap {
@@ -132,6 +127,13 @@
 		@media(max-width: 767px) {
 			position: relative;
 			padding-bottom: 76px;
+		}
+	}
+
+	.swiper-slide {
+		@media(max-width: 767px) {
+			display: flex;
+			flex-direction: column;
 		}
 	}
 

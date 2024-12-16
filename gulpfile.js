@@ -18,7 +18,7 @@ import del from "del";
 
 gulp.task("pug", function () {
 	return gulp
-		.src("src/pug/*.pug")
+		.src("src/pug/pages/*.pug")
 		.pipe(
 			pug({
 				pretty: false,
@@ -70,7 +70,7 @@ gulp.task("exportWebP", function () {
 		.pipe(imagemin([
 			webp({
 				// lossless: true, if pngs turn out sucky uncomment this and redo just pngs
-				quality: 80
+				quality: 100
 			})
 		]))
 		.pipe(extReplace(".webp"))

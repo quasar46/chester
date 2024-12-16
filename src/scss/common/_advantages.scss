@@ -1,0 +1,23 @@
+.advantages {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 42px;
+
+
+	.price__item {
+		@media(max-width: 767px) {
+			// flex-direction: row;
+			// align-items: center;
+		}
+	}
+
+	&--3 {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	@media(max-width: 767px) {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+}

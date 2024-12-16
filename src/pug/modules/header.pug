@@ -3,27 +3,6 @@ header.header
 		.header__wrap 
 			a.header__logo(href=page=='index' ? false : 'index.html')
 				img(alt="" src="img/logo.svg")
-			mixin menu
-				nav.header__nav.menu
-					.menu__item
-						a Услуги
-						include ../svg/arrow-down
-						.dropdown
-							.dropdown__links
-								a(href="disputs.html") Семейные споры
-								a(href="") Юридическое сопровождение бизнеса
-								a(href="") Трудовые споры
-								a(href="") Недвижимость
-								a(href="") Представительлство в судах
-					.menu__item
-						a(href="#staff") Юристы и адвокаты
-					.menu__item
-						a(href="#reviews") Отзывы
-					.menu__item
-						a(href="blog.html") Полезные статьи
-					.menu__item
-						a(href="contacts.html") Контакты
-					.menu__item
-			+menu
-			a.header__phone(href="tel:+79037900360" onclick="ym(62967727,'reachGoal','zvonok'); return true;")  +7 903 790 03 60
+			include menu
+			a.header__phone(href="tel:+78001010653" onclick="ym(62967727,'reachGoal','zvonok'); return true;")  +7 (800) 101-06-53
 			.burger

@@ -1,0 +1,23 @@
+section.section.offer.offer
+	.container 
+		.offer__wrap 
+			.offer__aside 
+				h2(data-aos="fade-right").section__title.offer__title ПОПРОБУЙТЕ ПЕРВЫЙ МЕСЯЦ
+				ul.offer__list 
+					li.offer__list-item
+						span.offer__list-title.offer__list-title--mode #{offerTitle1}
+					li.offer__list-item
+						span.offer__list-title.offer__list-title--mode #{offerTitle2}
+					li.offer__list-item
+						span.offer__list-title.offer__list-title--mode #{offerTitle3}
+
+		.feedback 
+			.feedback__content.feedback__content--mode
+				span.feedback__title.feedback__title--mode #{feedbackTitle}
+				.feedback__text 
+					p Оставьте заявку, и мы свяжемся в ближайшее время
+			form.form
+				.form__inputs 
+					input(type="text" name="name" placeholder="Имя" required)
+					input.phone-field(type="text" name="tel" placeholder="Номер телефона" required)
+				input.form__btn(type="submit" value="оценить дело" onsubmit="ym(62967727,'reachGoal','forma_obrat_sv'); return true;")

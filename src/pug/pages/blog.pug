@@ -1,0 +1,32 @@
+extends ../layout
+block vars
+	-var title = 'Полезные статьи'
+	-var link1 = "Блог"
+block main 
+	main
+		section.section
+			.container
+				.breadcrumbs 
+					.breadcrumbs__wrap
+						a(href="index.html") Главная
+						span /
+						a Полезные статьи
+
+		section 
+			.container 
+				h1(data-aos="fade-right").section__title.blog__title #{title}
+				.blog 
+					a(href="razdel_immushestva.html").blog__item
+						.blog__img 
+							img(src="img/tingey-injury-law-firm-nSpj-Z12lX0-unsplash.webp" alt="")
+						.blog__item-body
+							span.date 01.07.2024
+							h3.blog__item-title Раздел имущества супругов по соглашению и основные проблемы, которые могут возникнуть
+							p Среди всех имущественных договоров между супругами традиционно особое место занимают соглашения о разделе совместной собственности. В силу правила пункта 2 статьи 38 СК РФ, закреплённого в главе 7, содержащей нормы о законном режиме имущества супругов, супруги вправе разделить общее имущество по их соглашению.
+					a(href="chto_delat_pri_bankrotstve_zastrojshchika.html").blog__item
+						.blog__img 
+							img(src="img/tingey-injury-law-firm-nSpj-Z12lX0-unsplash.webp" alt="")
+						.blog__item-body
+							span.date 01.07.2024
+							h3.blog__item-title Что делать при банкротстве застройщика?
+							p Практически каждый из нас либо покупал, либо планирует купить квартиру. Большинство из нас подходит к выбору жилья очень серьезно

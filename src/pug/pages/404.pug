@@ -1,0 +1,13 @@
+extends ../layout
+block main 
+	main
+		section.section 
+			.container 
+				.error 	
+					.error__content 
+						h1 УПС! Такой страницы не найдено. 
+						p Вы можете перейти на <a href="index.html">главную</a> или ознакомиться со списком услуг ниже
+						a.btn.btn--main(href="index.html") ПЕРЕЙТИ НА ГЛАВНУЮ
+					a.error__number 404
+
+		include ../modules/directions

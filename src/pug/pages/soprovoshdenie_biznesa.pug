@@ -1,0 +1,62 @@
+extends ../layout
+block vars
+	-var titlePage = "Юридическое сопровождение бизнеса «под ключ»"
+	-var title = 'Юридическое сопровождение бизнеса «под ключ»'
+	-var isAncherStaff = true
+	-var isAncherReviews = true
+	-var feedbackTitle = "Получите коммерческое предложение"
+	-var offerTitle1 = "ОПЛАТА ПО СнИЖЕННОЙ СТОИМОСТИ"
+	-var offerTitle2 = "ТОЛЬКО ЗА РЕЗУЛЬТАТ"
+	-var offerTitle3 = "И ТОЛЬКО В СЛУЧАЕ ПРОДЛЕНИЯ РАБОТ"
+	-var offerText1 = "Профильный юрист с опытом минимум 10 лет по спорам с недвижимостью, чтобы сразу вникнуть в вопрос, сэкономить ваше время и помочь"
+	-var offerText2 = "Честно скажем шансы на победу без обещаний несбыточных результатов на о	снове 25-ти летней практики и знания судебного правоприменения"
+	-var offerText3 = "Точно поймём, сколько будет стоить вести дело, — без внезапных доплат."
+	-var offerText4 = "Расскажем отработанный за 25 лет алгоритм действий, нужный для победы."
+	-var titlePrice = "ПО СпорАМ о сносе самовольных построек, зданий"
+	-var metaTitle = "Юридическое сопровождение бизнеса «под ключ» "
+	-var metaDiscription = `Закроем любые юридические задачи бизнеса "под ключ" с фиксированной ценой и без лимита консультаций. Команда юристов и адвокатов с историей в 25 лет ЧестерК.`
+block main 
+	main
+		section.section.main-block 
+			.main-block__img
+				img(src="img/bg19.webp" alt="")
+			.container
+				.breadcrumbs 
+					.breadcrumbs__wrap
+						a(href="index.html") Главная
+						span /
+						a #{title}
+				section.section.inner-block
+					h1.title(data-aos="fade-right") #{title}
+					.inner-block__content 
+						p ЮРИДИЧЕСКОЕ АГЕНТСТВО ЧЕСТЕР - К
+						a.btn.show-modal Консультация с юристом
+					.main-block__benefici
+						.main-block__benefici-item
+							h2.main-block__benefici-title ЛЮБЫЕ ОБЛАСТИ ПРАВА ДЛЯ БИЗНЕСА
+							.main-block__benefici-text
+								p Корпоративное, трудовое, антимонопольное, таможенное, земельное, налоговое.
+								p На всех уровнях: от досудебного урегулирования, до верховного суда.
+						.main-block__benefici-item
+							h2.main-block__benefici-title Безлимитное количество консультаций и решаемых задач
+							.main-block__benefici-text
+								p По-настоящему неограниченное количество консультаций и задач для юристов. 
+								p Ответы в тот же день в любом мессенджере или по почте.
+						.main-block__benefici-item
+							h2.main-block__benefici-title Команда юристов и адвокатов
+							.main-block__benefici-text
+								p С опытом в профессии от 10 до 42 лет.
+								p При этом работающие в нашем агентстве минимум 7 лет, с узкой специализацией доведут дело до победы.
+
+		include ../modules/tasks
+
+		include ../modules/advantages
+
+
+
+		include ../modules/achiev
+		include ../modules/feedback2
+		include ../modules/staff
+		include ../modules/case
+		include ../modules/reviews
+		include ../modules/block-contact
