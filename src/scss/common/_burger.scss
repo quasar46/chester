@@ -5,6 +5,7 @@
 	background-size: contain;
 	width: 24px;
 	height: 24px;
+	cursor: pointer;
 
 	&.active {
 		background-image: url("../img/burger-close.svg");
