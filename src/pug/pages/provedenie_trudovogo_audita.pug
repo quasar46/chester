@@ -1,0 +1,67 @@
+extends ../layout
+block vars
+	-var title = 'Проведение трудового аудита'
+	-var titlePrice = "по трудовым спором"
+	-var isAncherStaff = true
+	-var isAncherReviews = true
+	-var feedbackTitle = "Записаться на первую бесплатную консультацию юриста по трудовому аудиту"
+	-var offerTitle1 = "Консультирует юрист по трудовым спорам "
+	-var offerTitle2 = "ЧЕСТНАЯ ОЦЕНКА ПЕРСПЕКТИВ ДЕЛА"
+	-var offerTitle3 = "ОЦЕНИМ СТОИМОСТЬ РАБОТ И ДАДИМ АЛГОРИТМ ДЕЙСТВИЙ"
+	-var offerText1 = "Профильный юрист с опытом минимум 10 лет в трудовых спорах, чтобы сразу вникнуть в вопрос, сэкономить ваше время и помочь "
+	-var offerText2 = "Честно скажем шансы на победу без обещаний несбыточных результатов на о	снове 25-ти летней практики и знания судебного правоприменения"
+	-var offerText3 = "Точно поймём, сколько будет стоить вести дело, — без внезапных доплат."
+	-var offerText4 = "Расскажем отработанный за 25 лет алгоритм действий, нужный для победы."
+	-var price1 = "30 000"
+	-var price2 = "150 000"
+	-var metaTitle = "Проведение трудового аудита | Честер-К"
+	-var metaDiscription = "Изучим и доработаем трудовые и кадровые документы, предотвратим риски связанные с трудовыми отношениями. Команда юристов и адвокатов с опытом от 10 лет и специализацией по трудовым спорам"
+block main 
+	main
+		section.section.main-block 
+			.main-block__img
+				img(src="img/bg24.webp" alt="")
+			.container
+				.breadcrumbs 
+					.breadcrumbs__wrap
+						a(href="index.html") Главная
+						span /
+						a(href="trudovye_spory.html") Трудовые споры
+						span /
+						a  Проведение трудового аудита
+				section.section.inner-block
+					h1.title(data-aos="fade-right") #{title}
+					.inner-block__content 
+						p ЮРИДИЧЕСКОЕ АГЕНТСТВО ЧЕСТЕР - К
+						a.btn.show-modal Консультация с юристом
+					//- .links
+					//- 	a(href="provedenie_trudovogo_audita.html") Проведение трудового аудита
+					//- 	a(href="soprovozhdenie_uvolneniya_rabotnika.html") Сопровождение увольнения работника
+					//- 	a(href="predstavlenie_v_sude_po_sporam_s_rabotnikom.html") Представление интересов в судах по трудовым спорам с работником
+					//- 	a(href="dosudebnoe_soprovozhdenie_pri_sporah_s_rabotodatelem.html") Досудебное сопровождение при конфликтной ситуации с работодателем 
+					//- 	a(href="predstavlenie_v_sudah_po_sporam_s_rabotodatelem.html") Представление интересов в судах по трудовым спорам с работодателем
+
+					.main-block__benefici
+						.main-block__benefici-item
+							h2.main-block__benefici-title более 25 лет практического опыта
+							.main-block__benefici-text
+								p При первом общении честно расскажем о перспективах дела, а также полностью вникнем в каждую ситуацию и доведем до уверенной победы!
+						.main-block__benefici-item
+							h2.main-block__benefici-title 96% выигранных дел
+							.main-block__benefici-text
+								p За счёт гигантского опыта в 25 лет, практики во всех судах Москвы и  во всех регионах России, включая «новые». В остальных 4% дел снижали взыскиваемые суммы на 30-70%. Финансово заинтересованы в вашей победе
+						.main-block__benefici-item
+							h2.main-block__benefici-title команда юристов и адвокатов
+							.main-block__benefici-text
+								p С опытом работы в профессии от 10 до 42 лет и стажем работы в нашем агентстве не менее 7 лет. Специализируются в трудовых спорах и мягко доведут ваше дело до победы.
+		include ../modules/feedback
+
+		//- include ../modules/case-inner
+		//- include ../modules/price
+		include ../modules/achiev
+		include ../modules/staff
+		include ../modules/swiper-lawyers
+		include ../modules/case-trudovye_spory
+		include ../modules/reviews
+		//- include ../modules/questions
+		include ../modules/block-contact

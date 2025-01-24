@@ -128,6 +128,29 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	})
 
+	const swiper7 = new Swiper('#swiper-lawyers', {
+		slidesPerView: 1,
+		navigation: {
+			nextEl: '#swiper-lawyers .swiper-button-next',
+			prevEl: '#swiper-lawyers .swiper-button-prev',
+		},
+		pagination: {
+			el: '#swiper-lawyers .swiper-pagination'
+		}
+	})
+
+	const swiper8 = new Swiper('#swiper-lawyers-mobile', {
+		slidesPerView: 1,
+		autoHeight: true,
+		navigation: {
+			nextEl: '#swiper-lawyers-mobile .swiper-button-next',
+			prevEl: '#swiper-lawyers-mobile .swiper-button-prev',
+		},
+		// pagination: {
+		// 	el: '#swiper-lawyers-mobile .swiper-pagination'
+		// }
+	})
+
 
 
 	const scrollTop = document.querySelector('.scroll-top')
@@ -221,6 +244,12 @@ document.addEventListener('DOMContentLoaded', function () {
 	// 	})
 	// })
 })
+
+if (document.querySelector('.work-directions__img')) {
+	document.querySelector('.work-directions__img').style = `height: ${document.querySelector('.work-directions__links').clientHeight}px`
+}
+
+
 
 $(function () {
 	let header = $('.header');

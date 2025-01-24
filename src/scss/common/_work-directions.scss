@@ -1,6 +1,7 @@
 .work-directions {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
+	align-items: flex-start;
 	gap: 32px;
 	padding: 32px;
 	border: 1px solid #fff;
@@ -13,6 +14,7 @@
 			height: 100%;
 			width: 100%;
 			object-fit: cover;
+			object-position: top;
 		}
 	}
 

@@ -92,3 +92,22 @@
 		margin-bottom: 24px;
 	}
 }
+
+.swiper-lawyers {
+	position: static;
+
+	// height: 788px;
+	&--desctop {
+		@media(max-width: 767px) {
+			display: none;
+		}
+	}
+
+	&--mobile {
+		display: none;
+
+		@media(max-width: 767px) {
+			display: block;
+		}
+	}
+}

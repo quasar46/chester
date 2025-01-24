@@ -51,7 +51,7 @@ gulp.task("css", function () {
 });
 
 gulp.task('vendor', function () {
-	return gulp.src("src/vendor/*.*")
+	return gulp.src("src/vendor/**/*.*")
 		.pipe(gulp.dest("build"))
 });
 
