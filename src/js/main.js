@@ -286,7 +286,7 @@ $(document).ready(function () {
 		let name = $(this).find('[name="name"]').val();
 		let tel = $(this).find('[name="tel"]').val();
 		$.ajax({
-			url: "https://wild-marketing.biz/chester/sendmail.php", // куда отправляем
+			url: "https://chesterk.ru/sendmail.php", // куда отправляем
 			type: "post", // метод передачи
 			data: { // что отправляем
 				"name": name,
